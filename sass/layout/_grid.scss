@@ -1,0 +1,26 @@
+.grid {
+    padding: $grid-padding;
+    display: grid;
+    grid-template-columns: repeat(5, $grid-cell-big-desktop);
+    grid-template-rows: repeat(5, $grid-cell-big-desktop);
+    gap: $grid-gap-big-desktop $grid-gap-big-desktop;
+    grid-auto-flow: row dense;
+    
+    @include respond(desktop) {
+        grid-template-columns: repeat(5, $grid-cell-desktop);
+        grid-template-rows: repeat(5, $grid-cell-desktop);
+        gap: $grid-gap-desktop $grid-gap-desktop;
+    }
+    @include respond(tablet) {
+        padding: $grid-padding-tablet;
+        grid-template-columns: repeat(4, $grid-cell-tablet);
+        grid-template-rows: repeat(6, $grid-cell-tablet);
+        gap: $grid-gap-tablet $grid-gap-tablet;
+    }
+    @include respond(phone) {
+        padding: $grid-padding-phone;
+        grid-template-columns: repeat(2, $grid-cell-phone);
+        grid-template-rows: repeat(13, $grid-cell-phone);
+        gap: $grid-gap-phone $grid-gap-phone;
+    }
+}

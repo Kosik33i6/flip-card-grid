@@ -1,0 +1,58 @@
+.card{
+    position: relative;
+    -moz-perspective: 1500px;
+    perspective: 1500px;
+    cursor: pointer;
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: all .3s ease;
+        text-align: center;
+        font-size: 27px;
+        color: white;
+        line-height: 100px;
+        user-select: none;
+        z-index: 1;
+        &--front,
+        &--back {
+            border-radius: 10px;
+        }
+        &--front {
+            background-color: lightseagreen;
+        }
+        &--back {
+            transform: rotateY(180deg);
+            background-color: orangered;
+        }
+    }
+    &--flipped &__side--front{
+        animation: flip-element-front-side .8s ease forwards; 
+    }
+    &--flipped &__side--back {
+        animation: flip-element-back-side .8s ease forwards;
+    }
+    &--flipped-back &__side--front {animation: turn-back-element-front-side .8s ease forwards;}
+    &--flipped-back &__side--back {animation: turn-back-element-back-side .8s ease forwards;}
+
+    &--small {
+        // * kwadrat 1x1
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    &--medium {
+        // * prostokąt 2x1
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    &--big {
+        // * kwadrat 2x2
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+

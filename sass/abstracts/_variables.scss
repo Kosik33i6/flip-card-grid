@@ -1,0 +1,15 @@
+$grid-gap-big-desktop: 25px;
+$grid-gap-desktop: 15px;
+$grid-gap-tablet: 10px;
+$grid-gap-phone: 5px;
+
+$grid-padding: 30px;
+$grid-padding-tablet: 15px;
+$grid-padding-phone: 5px;
+
+$scrollbar-width: 10px;
+
+$grid-cell-big-desktop: calc((100vw - (2 * #{$grid-padding}) - (4 * #{$grid-gap-big-desktop}) - #{$scrollbar-width}) / 5);
+$grid-cell-desktop: calc((100vw - (2 * #{$grid-padding}) - (4 * #{$grid-gap-desktop}) - #{$scrollbar-width}) / 5);
+$grid-cell-tablet: calc((100vw - (2 * #{$grid-padding-tablet}) - (3 * #{$grid-gap-tablet})) / 4);
+$grid-cell-phone: calc((100vw - (2 * #{$grid-padding-phone}) - #{$grid-gap-phone}) / 2);

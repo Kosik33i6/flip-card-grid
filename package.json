@@ -1,0 +1,20 @@
+{
+  "name": "task-5-flip-card-grid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "prefix:css": "postcss --use autoprefixer css/style.css -o css/style.prefix.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.3",
+    "postcss-cli": "^8.3.1"
+  }
+}
